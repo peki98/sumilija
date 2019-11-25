@@ -1,0 +1,162 @@
+nav {
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, .8);
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    position: sticky;
+    top: 0;
+}
+ul{
+    display: flex;
+    margin: 0;
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+
+
+}
+
+nav ul li a{
+    display: block;
+    color: #fff;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #000;
+    color: white;
+}
+
+.fleks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.comi {
+    margin-bottom: 50px;
+    flex: 1;
+}
+.peki {
+    margin-bottom: 50px;
+    flex: 1;
+}
+.ikac{
+    margin-bottom: 50px;
+    flex: 1;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+}
+
+.fleks p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fleks p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    border: 1px tomato solid;
+    width: 400px;
+    height: 150px;
+}
+
+#poruka {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    border: 1px tomato solid;
+    width: 400px;
+    height: 30px;
+}
+
+
+#zvezdice1 ul {
+    float: none;
+    display: inline-block;
+    
+}
+
+#zvezdice1 {
+    width: 400px;
+    height: 200px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#zvezdice1 li {
+    display: inline-block;
+    font-size: 30px;
+}
+
+
+#zvezdice2 ul {
+    float: none;
+    display: inline-block;
+    
+}
+
+#zvezdice2 {
+    width: 400px;
+    height: 200px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#zvezdice2 li {
+    display: inline-block;
+    font-size: 30px;
+}
+
+#zvezdice3 ul {
+    float: none;
+    display: inline-block;
+    
+}
+
+#zvezdice3 {
+    width: 400px;
+    height: 200px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#zvezdice3 li {
+    display: inline-block;
+    font-size: 30px;
+}
+
+
+
+#poruka1 {
+    color: white;
+    font-size: 23px;
+}
+#poruka2 {
+    color: white;
+    font-size: 23px;
+}
+#poruka3 {
+    color: white;
+    font-size: 23px;
+}
+
+nav ul li a:hover{
+    color: red;
+    transition: all 2s ease;
+}

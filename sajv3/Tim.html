@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sumilija</title>
+    <link rel="stylesheet" href="cSs/izgledTim.css">
+</head>
+<body>
+    <!-- <header> <img src="220px-Pamir_13.jpg" ></header> -->
+    <nav>
+        <ul>
+            <li><a href="index.html">POCETNA</a></li>
+            <li><a href="Tim.html">TIM</a></li>
+            <li><a href="Kontakt.html">KONTAKT</a></li>
+            <li><a href="login.html">PRIJAVA</a></li>
+        </ul>
+    </nav>
+
+<div class="fleks">
+    <div class="comi">
+        <img src="slike/comi.jpg">
+        <p>- Mihailo Jolovic -<br>- Co-Founder -<br>- Glavni Koordinator -<br>- Zona 1 -</p>
+        <p id="poruka">Molimo vas ocenite Koordinatora!</p>
+        <div id="zvezdice1">
+            <ul>
+                <li><i class="fas fa-star"data-index="0"></i></li>
+                <li><i class="fas fa-star"data-index="1"></i></li>
+                <li><i class="fas fa-star"data-index="2"></i></li>
+                <li><i class="fas fa-star"data-index="3"></i></li>
+                <li><i class="fas fa-star"data-index="4"></i></li>
+            </ul>
+            <p id="poruka1"><br> Hvala sto ste ocenili!</p>
+        </div>
+    </div>
+
+    <div class="peki">
+        <img src="slike/peki.jpg">
+        <p>- Petar Jovanovic -<br>- Co-Founder -<br>- Koordinator -<br>- Zona 2 -<br></p>
+        <p id="poruka">Molimo vas ocenite Koordinatora!</p>
+        <div id="zvezdice2">
+            <ul>
+                <li><i class="fas fa-star"data-index="0"></i></li>
+                <li><i class="fas fa-star"data-index="1"></i></li>
+                <li><i class="fas fa-star"data-index="2"></i></li>
+                <li><i class="fas fa-star"data-index="3"></i></li>
+                <li><i class="fas fa-star"data-index="4"></i></li>
+            </ul>
+            <p id="poruka2"><br> Hvala sto ste ocenili!</p>
+        </div>   
+    </div>
+
+    <div class="ikac">
+        <img src="slike/ikac.jpg">
+        <p>- Ilija Jovanovic -<br>- Co-Founder -<br>- Koordinator -<br>- Zona 3 -<br></p>
+        <p id="poruka">Molimo vas ocenite Koordinatora!</p>
+        <div id="zvezdice3">
+            <ul>
+                <li><i class="fas fa-star" data-index="0"></i></li>
+                <li><i class="fas fa-star" data-index="1"></i></li>
+                <li><i class="fas fa-star" data-index="2"></i></li>
+                <li><i class="fas fa-star" data-index="3"></i></li>
+                <li><i class="fas fa-star" data-index="4"></i></li>
+            </ul>
+            <p id="poruka3"><br> Hvala sto ste ocenili!</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script>
+    var ratedIndex = -1;
+
+    $(document).ready(function(){
+
+        $("#poruka1").hide();
+        $("#poruka2").hide();
+        $("#poruka3").hide();
+        
+        reset1();
+
+        $("#zvezdice1 .fa-star").on('click', function(){
+            ratedIndex = parseInt($(this).data('index'));
+            // $("#zvezdice1 ul").append('Hvala vam sto ste ocenili!');
+            $("#poruka1").show();
+        });
+
+
+        $("#zvezdice1 .fa-star").mouseover(function(){
+            reset1();
+
+            var currentIndex = parseInt($(this).data('index'));
+
+            for (var i = 0; i <= currentIndex; i++ ) {
+                $('#zvezdice1 .fa-star:eq('+i+')').css('color', 'tomato');
+            }
+        });
+
+        $("#zvezdice1 .fa-star").mouseleave(function(){
+            reset1();
+
+            if (ratedIndex != -1){
+                for (var i = 0; i <= ratedIndex; i++ ) {
+                   $('#zvezdice1 .fa-star:eq('+i+')').css('color', 'tomato');
+             }
+            }
+        });
+    });
+
+    function reset1() {
+        $('#zvezdice1 .fa-star').css('color', 'white');
+    }
+
+    $(document).ready(function(){
+        
+        reset2();
+
+        $("#zvezdice2 .fa-star").on('click', function(){
+            ratedIndex = parseInt($(this).data('index'));
+            $("#poruka2").show();
+        });
+
+
+        $("#zvezdice2 .fa-star").mouseover(function(){
+            reset2();
+
+            var currentIndex = parseInt($(this).data('index'));
+
+            for (var i = 0; i <= currentIndex; i++ ) {
+                $('#zvezdice2 .fa-star:eq('+i+')').css('color', 'tomato');
+            }
+        });
+
+        $("#zvezdice2 .fa-star").mouseleave(function(){
+            reset2();
+
+            if (ratedIndex != -1){
+                for (var i = 0; i <= ratedIndex; i++ ) {
+                   $('#zvezdice2 .fa-star:eq('+i+')').css('color', 'tomato');
+             }
+            }
+        });
+    });
+
+    function reset2() {
+        $('#zvezdice2 .fa-star').css('color', 'white');
+    }
+
+    $(document).ready(function(){
+        
+        reset3();
+
+        $("#zvezdice3 .fa-star").on('click', function(){
+            ratedIndex = parseInt($(this).data('index'));
+            $("#poruka3").show();
+            
+        });
+
+
+        $("#zvezdice3 .fa-star").mouseover(function(){
+            reset3();
+
+            var currentIndex = parseInt($(this).data('index'));
+
+            for (var i = 0; i <= currentIndex; i++ ) {
+                $('#zvezdice3 .fa-star:eq('+i+')').css('color', 'tomato');
+            }
+        });
+
+        $("#zvezdice3 .fa-star").mouseleave(function(){
+            reset3();
+
+            if (ratedIndex != -1){
+                for (var i = 0; i <= ratedIndex; i++ ) {
+                   $('#zvezdice3 .fa-star:eq('+i+')').css('color', 'tomato');
+             }
+            }
+        });
+    });
+
+    function reset3() {
+        $('#zvezdice3 .fa-star').css('color', 'white');
+    }
+
+
+
+</script>
+
+
+<script src="https://kit.fontawesome.com/0bb8a44de3.js" crossorigin="anonymous"></script>
+</body>
+</html>

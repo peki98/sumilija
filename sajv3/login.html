@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sumilija</title>
+    <link rel="stylesheet" href="cSs/izgledLogin.css">
+</head>
+<body>
+    <!-- <header> <img src="220px-Pamir_13.jpg" ></header> -->
+    <nav>
+        <ul>
+            <li><a href="index.html">POCETNA</a></li>
+            <li><a href="Tim.html">TIM</a></li>
+            <li><a href="Kontakt.html">KONTAKT</a></li>
+            <li><a href="login.html">PRIJAVA</a></li>
+        </ul>
+    </nav>
+<div class="D">
+<div class="deo1">
+    <form id="myForm">
+    <div class="login-box">
+        <h1>Prijava</h1>
+        <div class="textbox">
+            <img src="slike/userName.png" >
+            <input type="text" placeholder="Ime I Prezime" name="" value="" id="fname" required>
+        </div>
+        <div class="textbox">
+            <img src="slike/kalendar.png" >
+            <input type="text" placeholder="Godine" name="" value="" id="fgod" required>
+        </div>
+
+        <div class="textbox">
+            <img src="slike/lok.png" >
+            <select>
+                <option value="Surčin">Surčin</option>
+                <option value="Ledine">Ledine</option>
+                <option value="Zvezdara">Zvezdara</option>
+                <option value="Voždovac">Voždovac</option>
+                <option value="Bežanija">Bežanijska Kosa</option>
+                <option value="Kaluđerica">Kaluđerica</option>
+              </select>
+        </div>
+        <div class="textbox">
+            <img src="slike/sat.png" >
+            <select>
+                <option value="Ponedeljak">PON 2PM-6PM</option>
+                <option value="Sreda">SRE 12PM-4PM</option>
+                <option value="Subota">SUB 10PM-2PM</option>
+              </select>
+        </div>
+        <!-- <input class="btn" type="submit" onclick="validateForm()" name="" value="Prijavi se"> -->
+        <input class="btn" type="button" onclick="restartovanje(); pokaziVreme();" name="" value="Ponisti prijavu">
+        <input class="btn" type="button" onclick="pokaziVreme();validateForm()" name="" value="Prijavi se">
+    </div>
+</form>
+</div>
+
+<div class="deo2">
+    
+    <div>
+        <h1>POSLEDNJA PRIJAVA</h1>
+    </div>
+
+    <p>Mogu se videti datumi i vreme poslednje prijave koja je izvrsena ili je pokusala da se izvrsi:</p>
+    <p id="vreme"></p>
+    
+</div>
+</div>
+
+
+<script>
+
+    function pokaziVreme () {
+        document.getElementById("vreme").innerHTML = Date()
+    }
+    
+
+function validateForm() {
+//   var x = document.forms["myForm"]["fname"].value;
+//   var y = document.forms["myForm"]["fgod"].value;
+//   if (x == "" ) {
+//     alert("Name must be filled out");
+//     return false;
+//   }
+
+//   if (y == "" ) {
+//     alert("Name must be filled out");
+//     return false;
+//   }
+
+    var ime1 = document.getElementById("fname");
+    var god1 = document.getElementById("fgod");
+
+    if (ime1.value == "" || god1.value == "") {
+        return false;
+    }else {
+        alert ("Uspesno ste se prijavili!~");
+        return true;
+    }
+}
+
+function restartovanje() {
+  document.getElementById("myForm").reset();
+}
+</script>
+
+</body>
+</html>
